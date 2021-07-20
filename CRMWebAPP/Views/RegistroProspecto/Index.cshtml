@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<h2>Registrar Prospecto</h2>
+
+<body>
+
+    <div id="Formulario">
+
+        <form id="registroP" style="background-color:azure;" class="container-fluid">
+
+            <div class="input">
+                <label>Nombre</label>
+                <input class="form-control" type="text" id="nombre" required placeholder="Nombre" />
+            </div>
+            <div class="input">
+                <label>Apellido Paterno</label>
+                <input class="form-control" type="text" id="apellidoP" required placeholder="Apellido Paterno" />
+            </div>
+            <div class="input">
+                <label>Apellido Materno</label>
+                <input class="form-control" type="text" id="apellidoM" placeholder="Apellido Materno" />
+            </div>
+            <div class="input">
+                <label>Calle</label>
+                <input class="form-control" type="text" id="Calle" required placeholder="Calle" />
+            </div>
+            <div class="input">
+                <label>Numero</label>
+                <input class="form-control" type="number" id="Numero" required placeholder="Numero" />
+            </div>
+            <div class="input">
+                <label>Colonia</label>
+                <input class="form-control" type="text" id="Colonia" required placeholder="Colonia" />
+            </div>
+            <div class="input">
+                <label>Codigo Postal</label>
+                <input class="form-control" type="number" id="codigoPostal" required placeholder="Codigo Postal" />
+            </div>
+            <div class="input">
+                <label>Telefono</label>
+                <input class="form-control" type="number" id="telefono" required maxlength="10" minlength="10" placeholder="Telefono" />
+            </div>
+            <div class="input">
+                <label>RFC</label>
+                <input class="form-control" type="text" id="rfc" required placeholder="RFC" />
+            </div>
+            <br />
+            <div class="input">
+                <input class="form-control" type="file" name="file" id="files" style="background-color:aquamarine">
+            </div>
+            <br />
+            <div class="bottom-wrapper">
+                <div class="submit">
+                    <input class="form-control" type="submit" value="Registrar" id="EnviaDatos" style="background-color:lightblue" />
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+@section scripts{
+
+    <script src="~/Scripts/Views/RegistraProspectos.js"></script>
+
+}

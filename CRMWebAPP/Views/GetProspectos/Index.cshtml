@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CRMWebApp.Models.MdlProspecto>
+@{
+    ViewBag.Title = "IndexGet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <h2>Prospectos</h2>
+    <div>
+        <h4>Informacion de prospectos</h4>
+
+        <div class="col-sm-12 table-responsive table-condensed table-sm" id="vent" style="font-size:small">
+
+            <table class="table table-bordered">
+
+                <thead class="thead-dark" style="background:azure">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Estatus</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Apellido_Paterno)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Apellido_Materno)
+                            </td>
+
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Estatus)
+                            </td>
+
+                        </tr>
+                    }
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+</body>
+
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("vistaget");
+
+        if (x.style.display === "none") {
+            $('#vistaget').show();
+            $('#vent').hide();
+
+        } else {
+            $('#vistaget').hide();
+            $('#vent').show();
+        }
+    }
+</script>
